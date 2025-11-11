@@ -1,0 +1,328 @@
+.profile-container {
+    height: 100%;
+    margin-top: 80px;
+}
+
+.profile-header-container {
+    box-sizing: border-box;
+    height: 160px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    padding: 16px;
+    background-color: rgb(37, 37, 37);
+}
+
+.profile-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    width: 100%;
+    height: 100%;
+}
+
+.profile-details * {
+    margin: 0;
+    text-align: left;
+}
+
+.profile-details p {
+    font-family: none;
+}
+
+.profile-headers h2 {
+    font-size: 1.2rem;
+    margin-bottom: 4px;
+    letter-spacing: 1px;
+}
+
+.profile-headers h3 {
+    font-size: 0.8rem;
+    font-style: italic;
+    font-weight: lighter;
+    color: rgb(160, 160, 160);
+}
+
+.profile-btns {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    margin-left: 24px;
+}
+
+#upload-icon {
+    color: white;
+    height: 32px;
+}
+
+#upload-icon:hover {
+    color: #00ffff;
+}
+
+#report-icon {
+    color: white;
+    height: 32px;
+    cursor: pointer;
+}
+
+#edit-icon {
+    color: white;
+    height: 28px;
+    cursor: pointer;
+}
+
+#edit-icon:hover {
+    color: rgb(255, 205, 67);
+}
+
+.profile-work-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    row-gap: 8px;
+    column-gap: 8px;
+}
+
+.profile-work-item {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: start;
+    align-items: end;
+    height: 180px;
+    padding: 8px;
+    background-image: url("../../assets/3d-cube.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.profile-work-item p {
+    margin: 0;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #00ffff;
+    padding: 4px;
+    border-radius: 6px;
+    background-color: black;
+}
+
+/* 
+    Model viewer
+*/
+.work-view-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    background-color: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    backdrop-filter: blur(2px);
+}
+
+.work-view-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    width: 1080px;
+    height: 70%;
+    margin-top: 160px;
+}
+
+.work-view-container {
+    height: 100%;
+    width: 100%;
+    border-radius: 8px 8px 0 0;
+    background-color: rgb(119, 119, 119, 0.2);
+    cursor: move;
+}
+
+.work-view-details {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    width: 100%;
+    padding: 8px;
+    border-radius: 0 0 8px 8px;
+    background-color: rgb(119, 119, 119, 0.2);
+    cursor: default;
+}
+
+.work-view-details-text * {
+    text-align: left;
+    margin: 0;
+}
+
+.work-view-details-text h2 {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    color: #00ffff;
+}
+
+.work-view-details-text p {
+    font-family: none;
+}
+
+.work-view-details button {
+    height: 32px;
+    width: 32px;
+    margin-left: 50px;
+    font-size: 1.5rem;
+    border: 1px solid #ff0303;
+    border-radius: 4px;
+    color: rgb(255, 0, 0);
+    background-color: transparent;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.work-view-details button:hover {
+    box-shadow: 0 0 12px rgba(255, 2, 2, 0.5);
+}
+
+/* 
+    Profile editor
+*/
+.edit-profile-overlay {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    background-color: #0f0f0f;
+    background: linear-gradient(240deg, #0f0f0f, #29292e);
+}
+
+.edit-profile-content {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 1080px;
+    margin-top: 160px;
+    padding: 16px;
+    border-radius: 8px;
+    background: rgba(50, 50, 50, 0.5);
+}
+
+#edit-profile-cancel-btn {
+    width: 100%;
+    display: grid;
+    place-content: end;
+}
+
+#edit-profile-cancel-btn button {
+    width: 100px;
+    height: 32px;
+    background: rgb(30, 30, 30);
+    color: #e0e0e0;
+    border: 1px solid #00ffff;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+#edit-profile-cancel-btn button:hover {
+    color: #ffffff;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.5);
+}
+
+.edit-profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.edit-profile-form input,
+.edit-profile-form textarea {
+    background-color: rgb(30, 30, 30);
+    border: none;
+    border-radius: 8px;
+    padding: 12px;
+    color: #fff;
+    font-size: 1rem;
+    outline: none;
+    resize: none;
+}
+
+.edit-profile-form button {
+    width: 120px;
+    height: 32px;
+    background-color: #00ffff;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.edit-profile-form button:hover {
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+/* 
+    Report container
+*/
+.report-container {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #0f0f0f;
+    background: linear-gradient(240deg, #0f0f0f, #29292e);
+}
+
+.report-btn-container {
+    width: 100%;
+    max-width: 1080px;
+    text-align: right;
+}
+
+.report-btn-container button {
+    width: 80px;
+    height: 32px;
+    background: transparent;
+    color: #e0e0e0;
+    border: 1px solid #00ffff;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+.report-btn-container button:hover {
+    color: #ffffff;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.5);
+}
+
+.report-table {
+    max-width: 1080px;
+    border-collapse: collapse;
+    font-family: none;
+}
+
+.report-table th, .report-table td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.report-table th {
+    color: black;
+    background-color: #f2f2f2;
+    text-align: left;
+}

@@ -1,0 +1,69 @@
+.login-container {
+    height: 100%;
+    margin-top: 80px;
+}
+
+.login-navigation-btns {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+#sign-up-page-btn {
+    width: 120px;
+    height: 32px;
+    margin-right: 80px;
+    background: transparent;
+    color: #e0e0e0;
+    border: 1px solid #00ffff;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 1px;
+    cursor: pointer;
+}
+
+#sign-up-page-btn:hover {
+    color: #ffffff;
+    box-shadow: 0 0 12px rgba(0, 255, 255, 0.5);
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 400px;
+    height: 60%;
+    min-height: 400px;
+    margin: 0 auto;
+}
+
+.login-form input {
+    width: 100%;
+    height: 48px;
+    margin-bottom: 16px;
+    border: none;
+    border-radius: 8px;
+    padding: 0 8px;
+    background-color: rgb(37, 37, 37);
+    color: #e0e0e0;
+    font-size: 1rem;
+    outline: none;
+}
+
+.login-form button {
+    width: 200px;
+    height: 40px;
+    background-color: #00ffff;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.login-form button:hover {
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
