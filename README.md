@@ -1,9 +1,9 @@
 # 3D Model Portfolio Platform  
-A full-stack web application that allows artists to upload, store, and interactively view 3D models. Built with **React**, **ASP.NET Core**, and **MySQL**.
+A full-stack web application that allows artists to upload, store, and interactively view 3D models.
 
 ---
 
-## 🚀 Features
+## 🚀 Features & Tech Stack
 
 ### ✅ Frontend (React + React Three Fiber)
 - Upload and display 3D models directly in the browser  
