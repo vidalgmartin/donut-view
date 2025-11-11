@@ -1,4 +1,4 @@
-# 3D Model Portfolio Platform  
+# 3D Model Sharing Platform  
 A full-stack web application that allows artists to upload, store, and interactively view 3D models.
 
 ---
@@ -25,7 +25,7 @@ During capstone evaluation, the system was deployed using:
 - **Azure App Service** – Backend API  
 - **AWS RDS** – MySQL database
 
-- ### ✅ Tools  
+### ✅ Tools  
 - Visual Studio Code / Visual Studio  
 - MySQL Workbench  
 - Git / GitHub  
