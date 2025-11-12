@@ -34,7 +34,6 @@ var connectionString = builder.Configuration.GetConnectionString("DefaultConnect
 builder.Services.AddDbContext<ServerDbContext>(options =>
     options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));   
 
-
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
@@ -43,7 +42,7 @@ app.UseHttpsRedirection();
 
 // cors for development
 app.UseCors(policy =>
-    policy.WithOrigins("https://donut-view-client.vercel.app")
+    policy.WithOrigins("http://localhost:5173")
         .AllowAnyHeader()
         .AllowAnyMethod());
 

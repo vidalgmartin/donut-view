@@ -1,6 +1,7 @@
 import { Canvas } from '@react-three/fiber'
 import { OrbitControls, useGLTF } from '@react-three/drei'
 import { useEffect, useState } from 'react'
+import { serverUrl } from "../serverUrl"
 
 function Model({ url }) {
     const gltf = useGLTF(url)
@@ -14,7 +15,7 @@ export default function WorkView({ modelId }) {
         const token = localStorage.getItem("token")
         
         const fetchModel = async () => {
-            const res = await fetch(`https://donut-view-server.azurewebsites.net/api/models3d/${modelId}`, {
+            const res = await fetch(`${serverUrl}/api/models3d/${modelId}`, {
                 headers: {
                     "Authorization": `Bearer ${token}`
                 }

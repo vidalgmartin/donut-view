@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react"
 import WorkView from "../../components/WorkView"
 import "./community.css"
+import { serverUrl } from "../../serverUrl"
 
 export default function Community() {
     const [ allModels, setAllModels ] = useState([])
@@ -15,7 +16,7 @@ export default function Community() {
 
     useEffect(() => {
         const getAllModels = async () => {
-            const res = await fetch("https://donut-view-server.azurewebsites.net/api/models3d/all")
+            const res = await fetch(`${serverUrl}/api/models3d/all`)
 
             const models = await res.json()
             setAllModels(models)

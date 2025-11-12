@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faUpload, faEdit, faFileLines } from "@fortawesome/free-solid-svg-icons"
 import WorkView from "../../components/WorkView"
 import './profile.css'
+import { serverUrl } from "../../serverUrl"
 
 export default function Profile() {
     const [ userModels, setUserModels ] = useState([])
@@ -17,7 +18,7 @@ export default function Profile() {
     const fetchReport = async () => {
         const token = localStorage.getItem("token")
 
-        const res = await fetch("https://donut-view-server.azurewebsites.net/api/users/reports/myuploads", {
+        const res = await fetch(`${serverUrl}/api/users/reports/myuploads`, {
             headers: {
                 Authorization: `Bearer ${token}`
             }
@@ -42,7 +43,7 @@ export default function Profile() {
         const token = localStorage.getItem("token")
 
         try {
-            const res = await fetch(`https://donut-view-server.azurewebsites.net/api/users/user`, {
+            const res = await fetch(`${serverUrl}/api/users/user`, {
                 headers: {
                     "Authorization": `Bearer ${token}`
                 }
@@ -59,7 +60,7 @@ export default function Profile() {
         const token = localStorage.getItem("token")
         
         try {
-            const res = await fetch(`https://donut-view-server.azurewebsites.net/api/models3d/user`, {
+            const res = await fetch(`${serverUrl}/api/models3d/user`, {
                 headers: {
                     "Authorization": `Bearer ${token}`
                 }
@@ -81,7 +82,7 @@ export default function Profile() {
             formData.append("Title", e.target.title.value.trim())
             formData.append("Description", e.target.description.value.trim())
 
-            const res = await fetch(`https://donut-view-server.azurewebsites.net/api/users/update`, {
+            const res = await fetch(`${serverUrl}/api/users/update`, {
                 method: "PUT",
                 headers: {
                     "Authorization": `Bearer ${token}`
@@ -107,7 +108,7 @@ export default function Profile() {
         const token = localStorage.getItem("token")
 
         try {
-            const res = await fetch(`https://donut-view-server.azurewebsites.net/api/models3d/${selectedModel.id}`, {
+            const res = await fetch(`${serverUrl}/${selectedModel.id}`, {
                 method: "DELETE",
                 headers: {
                     "Authorization": `Bearer ${token}`

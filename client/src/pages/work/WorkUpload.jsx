@@ -1,6 +1,7 @@
 import { Link, useNavigate } from 'react-router-dom'
 import { useState } from 'react'
 import './work.css'
+import { serverUrl } from "../../serverUrl"
 
 export default function WorkUpload() {
     const [ error, setError ] = useState(false)
@@ -34,7 +35,7 @@ export default function WorkUpload() {
         try {
             const token = localStorage.getItem("token")
             
-            const res = await fetch("https://donut-view-server.azurewebsites.net/api/models3d", {
+            const res = await fetch(`${serverUrl}/api/models3d`, {
                 method: "POST",
                 headers: {
                     "Authorization": `Bearer ${token}`

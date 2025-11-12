@@ -2,6 +2,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useState, useContext } from 'react'
 import { AuthContext } from '../../contexts/AuthContext'
 import './signup.css'
+import { serverUrl } from "../../serverUrl"
 
 export default function Signup() {
     const [ error, setError ] = useState(false)
@@ -47,7 +48,7 @@ export default function Signup() {
         formData.append("Password", password)
 
         try {
-            const res = await fetch("https://donut-view-server.azurewebsites.net/api/users", {
+            const res = await fetch(`${serverUrl}/api/users`, {
                 method: "POST",
                 body: formData
             })
