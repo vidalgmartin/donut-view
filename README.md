@@ -34,3 +34,9 @@ During capstone evaluation, the system was deployed using:
 *(The application is not currently hosted due to cloud costs)*
 
 ---
+
+<img width="2552" height="1263" alt="Screenshot 2025-11-11 191108" src="https://github.com/user-attachments/assets/4e850a26-2dde-41ea-878d-616cf4a4a6c1" />
+
+<img width="2555" height="1259" alt="Screenshot 2025-11-11 191129" src="https://github.com/user-attachments/assets/acf03235-3c24-415f-929b-b4844674d6ee" />
+
+<img width="2554" height="1259" alt="Screenshot 2025-11-11 191229" src="https://github.com/user-attachments/assets/ac71395e-66f8-4db1-bef8-05e3376a54f2" />
