@@ -1,5 +1,4 @@
 # 3D Model Sharing Platform  
-A full-stack web application that allows artists to upload, store, and interactively view 3D models.
 
 ---
 
@@ -24,14 +23,14 @@ During capstone evaluation, the system was deployed using:
 - **Vercel** – Frontend  
 - **Azure App Service** – Backend API  
 - **AWS RDS** – MySQL database
+  
+*(The application is not currently hosted due to cloud costs)*
 
 ### ✅ Tools  
 - Visual Studio Code / Visual Studio  
 - MySQL Workbench  
 - Git / GitHub  
 - Figma (UI planning)
-
-*(The application is not currently hosted due to cloud costs)*
 
 ---
 
